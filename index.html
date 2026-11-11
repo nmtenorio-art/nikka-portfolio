@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f9fc;
+            color: #263247;
+            line-height: 1.7;
+        }
+
+        /* NAVIGATION */
+        header {
+            background: #14243d;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            color: #65c7d0;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #65c7d0;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            padding: 70px 10%;
+            background: linear-gradient(135deg, #eaf4fa, #f7f9fc);
+        }
+
+        .hero img {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 7px solid white;
+            box-shadow: 0 5px 25px #00000020;
+        }
+
+        .hero-text h1 {
+            font-size: 45px;
+            color: #14243d;
+        }
+
+        .hero-text h2 {
+            color: #168c9b;
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        .hero-text p {
+            max-width: 550px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #168c9b;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #116c78;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 75px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #14243d;
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #168c9b;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        .about-text {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* CARDS */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000010;
+            border-left: 4px solid #168c9b;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px #00000015;
+        }
+
+        .card h3 {
+            color: #168c9b;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 15px;
+        }
+
+        /* SKILLS */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .skill {
+            background: #e2f3f5;
+            color: #126d79;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* PROJECTS */
+        .project {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000010;
+        }
+
+        .project h3 {
+            color: #168c9b;
+            margin-bottom: 10px;
+        }
+
+        .project a {
+            color: #168c9b;
+            font-weight: bold;
+        }
+
+        /* VALUES */
+        .values {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .values li {
+            background: white;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 8px;
+            list-style-position: inside;
+            box-shadow: 0 3px 10px #00000008;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #14243d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 850px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero-text h1 {
+                font-size: 34px;
+            }
+
+            .hero img {
+                width: 210px;
+                height: 210px;
+            }
+
+            section {
+                padding: 55px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="logo">MyPortfolio.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#values">Values</a>
+        </nav>
+    </header>
+
+    <!-- HOME / PROFILE -->
+    <div class="hero" id="home">
+        <img src="profile.jpg" alt="My Profile Picture">
+
+        <div class="hero-text">
+            <h1>Hello, I'm [Your Name]</h1>
+            <h2>Computer Science / IT Student</h2>
+            <p>
+                Welcome to my personal portfolio! This website
+                showcases my academic journey, skills, achievements,
+                and projects as a student interested in technology
+                and continuous learning.
+            </p>
+            <a href="#about" class="btn">Explore My Portfolio</a>
+        </div>
+    </div>
+
+    <!-- 1. PROFILE & BIOGRAPHY -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-text">
+            <p>
+                I am [Your Name], a college student currently taking
+                [Your Degree Program] at [School Name]. I am an
+                aspiring technology professional who is interested
+                in learning how computers and digital technologies
+                work. As a student, I enjoy discovering new things,
+                improving my skills, and exploring different areas
+                of information technology. I am particularly
+                interested in programming, web development, and
+                creating useful digital solutions. Throughout my
+                academic journey, I aim to develop my knowledge,
+                creativity, and problem-solving abilities. I know
+                that learning technology requires patience and
+                practice, so I am willing to accept challenges and
+                learn from my experiences. My goal is to become a
+                skilled and responsible IT professional in the future.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. ACADEMIC BACKGROUND -->
+    <section id="education">
+        <h2 class="section-title">Academic Background</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Senior High School</h3>
+                <p><strong>School:</strong> [SHS Name]</p>
+                <p><strong>Track/Strand:</strong> [Your Strand]</p>
+                <p><strong>Year:</strong> [Graduation Year]</p>
+            </div>
+
+            <div class="card">
+                <h3>College Education</h3>
+                <p><strong>School:</strong> [College Name]</p>
+                <p><strong>Program:</strong> [BSCS / BSIT]</p>
+                <p><strong>Year Level:</strong> [Your Year Level]</p>
+                <p><strong>Expected Graduation:</strong> [Year]</p>
+            </div>
+
+            <div class="card">
+                <h3>Relevant Coursework</h3>
+                <p>Introduction to Computing</p>
+                <p>Computer Programming</p>
+                <p>Web Development</p>
+                <p>Information Technology Fundamentals</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. NOTABLE ACHIEVEMENTS -->
+    <section id="achievements">
+        <h2 class="section-title">Notable Achievements</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Academic Achievements</h3>
+                <p>
+                    [Add your academic honors, awards, or
+                    school recognitions here.]
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Certifications</h3>
+                <p>
+                    [Add your completed online courses,
+                    certificates, or training programs.]
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Activities & Participation</h3>
+                <p>
+                    [Add seminars, workshops, competitions,
+                    or school organization activities.]
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. SKILLS -->
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+
+        <h3 style="text-align:center; margin-bottom:20px;">
+            Technical Skills
+        </h3>
+
+        <div class="skills-list">
+            <span class="skill">HTML5</span>
+            <span class="skill">CSS3</span>
+            <span class="skill">Basic JavaScript</span>
+            <span class="skill">C++</span>
+            <span class="skill">Microsoft Office</span>
+            <span class="skill">Computer Troubleshooting</span>
+        </div>
+
+        <h3 style="text-align:center; margin:35px 0 20px;">
+            Soft Skills
+        </h3>
+
+        <div class="skills-list">
+            <span class="skill">Problem-Solving</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Teamwork</span>
+            <span class="skill">Time Management</span>
+            <span class="skill">Adaptability</span>
+            <span class="skill">Willingness to Learn</span>
+        </div>
+    </section>
+
+    <!-- 5. PROJECTS & RESEARCHES -->
+    <section id="projects">
+        <h2 class="section-title">Projects & Researches</h2>
+
+        <div class="card-container">
+
+            <div class="project">
+                <h3>Project 1: Personal Web Portfolio</h3>
+                <p>
+                    A personal website designed to introduce myself
+                    and showcase my educational background, skills,
+                    achievements, and projects. Its objective is to
+                    present my information in an organized and
+                    professional way.
+                </p>
+                <br>
+                <p><strong>Technologies:</strong> HTML and CSS</p>
+                <p><strong>Category:</strong> Web Development</p>
+            </div>
+
+            <div class="project">
+                <h3>Project 2: Student Information System</h3>
+                <p>
+                    A simple student information system concept
+                    designed to organize student details such as
+                    names, courses, and year levels. Its objective
+                    is to demonstrate how technology can help
+                    manage information efficiently.
+                </p>
+                <br>
+                <p><strong>Technologies:</strong> [Your actual tools or languages]</p>
+                <p><strong>Category:</strong> Programming Project</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. WORK ETHICS & CORE VALUES -->
+    <section id="values">
+        <h2 class="section-title">Work Ethics & Core Values</h2>
+
+        <div class="values">
+            <ul>
+                <li>
+                    <strong>Responsibility:</strong>
+                    I take responsibility for my tasks and duties.
+                </li>
+
+                <li>
+                    <strong>Punctuality:</strong>
+                    I value time and try to finish tasks on schedule.
+                </li>
+
+                <li>
+                    <strong>Teamwork:</strong>
+                    I respect others and cooperate when working
+                    with a group.
+                </li>
+
+                <li>
+                    <strong>Continuous Learning:</strong>
+                    I am willing to learn new skills and improve
+                    my knowledge.
+                </li>
+
+                <li>
+                    <strong>Adaptability:</strong>
+                    I am open to changes, challenges, and new ideas.
+                </li>
+
+                <li>
+                    <strong>Integrity:</strong>
+                    I value honesty and respect in every task
+                    and responsibility.
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 [Your Name] | Personal Web Portfolio</p>
+        <p>Computer Science / IT Student</p>
+        <p>Thank you for visiting my portfolio!</p>
+    </footer>
+
+</body>
+</html>
