@@ -1,11 +1,13 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nikka Marie Samantha Tenorio | Personal Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,12 +39,18 @@ body {
     line-height: 1.7;
 }
 
-html {
-    scroll-padding-top: 85px;
-}
-
 a {
     text-decoration: none;
+}
+
+section {
+    padding: 85px 8%;
+    scroll-margin-top: 80px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
 }
 
 /* NAVIGATION */
@@ -51,8 +59,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.97);
     box-shadow: 0 3px 20px rgba(23,36,62,0.06);
 }
 
@@ -78,7 +85,7 @@ header {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 23px;
+    gap: 20px;
 }
 
 .nav-links a {
@@ -101,12 +108,11 @@ header {
     cursor: pointer;
 }
 
-/* HERO / PROFILE */
+/* HOME / PROFILE */
 
 .hero {
     background: linear-gradient(130deg, #eae7f7, #f7f5fc 55%, #e6edf8);
     padding: 100px 8%;
-    overflow: hidden;
 }
 
 .hero-container {
@@ -148,7 +154,6 @@ header {
     font-size: 18px;
     color: var(--blue);
     margin: 18px 0;
-    font-weight: 600;
 }
 
 .hero p {
@@ -204,23 +209,14 @@ header {
     font-weight: 700;
 }
 
-/* GENERAL SECTIONS */
-
-section {
-    padding: 85px 8%;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-}
+/* SECTION HEADINGS */
 
 .section-heading {
     text-align: center;
     margin-bottom: 45px;
 }
 
-.section-heading .small-title {
+.small-title {
     color: #9282c3;
     font-size: 12px;
     font-weight: 800;
@@ -241,7 +237,7 @@ section {
     margin-top: 8px;
 }
 
-/* ABOUT */
+/* 1. ABOUT ME */
 
 .about {
     background: white;
@@ -260,7 +256,7 @@ section {
     text-align: justify;
 }
 
-/* EDUCATION */
+/* 2. ACADEMIC BACKGROUND */
 
 .education-grid {
     display: grid;
@@ -310,7 +306,7 @@ section {
     color: var(--blue);
 }
 
-/* ACHIEVEMENTS */
+/* 3. ACHIEVEMENTS */
 
 .achievements {
     background: white;
@@ -334,7 +330,7 @@ section {
     transform: translateY(-5px);
 }
 
-.achievement-card .symbol {
+.symbol {
     font-size: 35px;
     margin-bottom: 15px;
 }
@@ -350,7 +346,7 @@ section {
     font-size: 13px;
 }
 
-/* SKILLS */
+/* 4. SKILLS */
 
 .skill-columns {
     display: grid;
@@ -385,7 +381,7 @@ section {
     font-weight: 700;
 }
 
-/* PROJECTS */
+/* 5. PROJECTS & RESEARCHES */
 
 .projects {
     background: white;
@@ -451,7 +447,7 @@ section {
     font-weight: 700;
 }
 
-/* WORK ETHICS */
+/* 6. WORK ETHICS & CORE VALUES */
 
 .values {
     display: grid;
@@ -505,7 +501,7 @@ footer p {
     font-size: 13px;
 }
 
-footer .footer-line {
+.footer-line {
     width: 50px;
     height: 3px;
     background: var(--lavender);
@@ -515,6 +511,7 @@ footer .footer-line {
 /* RESPONSIVE DESIGN */
 
 @media(max-width: 850px) {
+
     .navbar {
         padding: 16px 6%;
     }
@@ -565,6 +562,7 @@ footer .footer-line {
 }
 
 @media(max-width: 600px) {
+
     section {
         padding: 65px 6%;
     }
@@ -596,6 +594,7 @@ footer .footer-line {
         text-align: left;
     }
 }
+
 </style>
 </head>
 
@@ -604,10 +603,12 @@ footer .footer-line {
 <!-- NAVIGATION -->
 <header>
     <div class="navbar">
+
         <a href="#home" class="logo">NIKKA<span>.</span></a>
 
         <button class="menu-btn" id="menuBtn"
-                aria-label="Toggle navigation" aria-expanded="false">
+                aria-label="Toggle navigation"
+                aria-expanded="false">
             ☰
         </button>
 
@@ -620,19 +621,22 @@ footer .footer-line {
             <a href="#projects">Projects</a>
             <a href="#values">Core Values</a>
         </nav>
+
     </div>
 </header>
 
-<!-- PROFILE / HOME -->
+<!-- HOME / PROFILE -->
 <div class="hero" id="home">
+
     <div class="hero-container">
 
         <div class="hero-content">
+
             <span class="hello">WELCOME TO MY PORTFOLIO</span>
 
             <h1>Hi, I'm <span>Nikka Marie</span></h1>
 
-            <h2>BS Information Technology Student</h2>
+            <h2>Bachelor of Science in Information Technology Student</h2>
 
             <p>
                 An aspiring IT professional from the University of
@@ -644,20 +648,26 @@ footer .footer-line {
             <a href="#about" class="primary-btn">
                 Discover More →
             </a>
+
         </div>
 
         <div class="profile-frame">
-            <img src="profile.jpg" alt="Nikka Marie Samantha Tenorio">
+
+            <img src="profile.jpg"
+                 alt="Nikka Marie Samantha Tenorio">
+
             <div class="profile-caption">
                 Future IT Professional ✨
             </div>
+
         </div>
 
     </div>
 </div>
 
-<!-- SECTION 1: PROFILE & BIOGRAPHY -->
+<!-- 1. PROFILE & SHORT BIOGRAPHY -->
 <section class="about" id="about">
+
     <div class="container">
 
         <div class="section-heading">
@@ -667,29 +677,34 @@ footer .footer-line {
         </div>
 
         <div class="about-card">
+
             <p>
                 My name is Nikka Marie Samantha Tenorio, and I am
                 currently pursuing a Bachelor of Science in Information
                 Technology at the University of San Agustin. I completed
-                my Senior High School education under the STEM strand.
-                I am an aspiring IT professional who enjoys learning
-                about technology and discovering how it can make everyday
-                life easier. I am particularly interested in web
-                development, computer programming, and exploring digital
-                innovations. As a student, I know that learning requires
-                patience, practice, and dedication. I am always willing
-                to improve my knowledge, develop my skills, and accept
-                new challenges. My goal is to become a skilled and
-                responsible IT professional who can use technology
-                to create meaningful and useful solutions.
+                my Senior High School education under the Science,
+                Technology, Engineering, and Mathematics (STEM) strand
+                at Ramon Avanceña National High School. I am an aspiring
+                IT professional who enjoys learning about technology
+                and discovering how it can make everyday life easier.
+                I am particularly interested in web development,
+                computer programming, and exploring digital innovations.
+                As a student, I know that learning requires patience,
+                practice, and dedication. I am always willing to improve
+                my knowledge, develop my skills, and accept new challenges.
+                My goal is to become a skilled and responsible IT
+                professional who can use technology to create meaningful
+                and useful solutions.
             </p>
+
         </div>
 
     </div>
 </section>
 
-<!-- SECTION 2: ACADEMIC BACKGROUND -->
+<!-- 2. ACADEMIC BACKGROUND -->
 <section id="education">
+
     <div class="container">
 
         <div class="section-heading">
@@ -701,48 +716,71 @@ footer .footer-line {
         <div class="education-grid">
 
             <div class="info-card">
+
                 <div class="card-icon">🎓</div>
+
                 <h3>Senior High School</h3>
+
+                <p><strong>School:</strong> Ramon Avanceña National High School</p>
+
                 <p><strong>Strand:</strong> Science, Technology,
-                    Engineering, and Mathematics (STEM)</p>
+                Engineering, and Mathematics (STEM)</p>
+
                 <p><strong>Status:</strong> Completed</p>
-                <p><strong>School:</strong> [Senior High School Name]</p>
+
             </div>
 
             <div class="info-card">
+
                 <div class="card-icon">🏛️</div>
+
                 <h3>College Education</h3>
+
                 <p><strong>Institution:</strong> University of San Agustin</p>
+
                 <p><strong>Degree:</strong> Bachelor of Science in
-                    Information Technology</p>
+                Information Technology (BSIT)</p>
+
                 <p><strong>Status:</strong> Currently Enrolled</p>
-                <p><strong>Expected Graduation:</strong> [Year]</p>
+
+                <p><strong>Expected Graduation:</strong> [Your Graduation Year]</p>
+
             </div>
 
             <div class="info-card">
+
                 <div class="card-icon">💻</div>
+
                 <h3>Relevant Coursework</h3>
+
                 <p>Introduction to Computing</p>
                 <p>Computer Programming</p>
                 <p>Web Development</p>
                 <p>Information Technology Fundamentals</p>
+
             </div>
 
             <div class="info-card">
+
                 <div class="card-icon">📚</div>
+
                 <h3>Academic Interests</h3>
+
                 <p>Website Design and Development</p>
                 <p>Programming and Problem-Solving</p>
                 <p>Computer Systems</p>
                 <p>Digital Technology</p>
+
             </div>
 
         </div>
+
     </div>
 </section>
 
-<!-- SECTION 3: ACHIEVEMENTS -->
+<!-- 3. NOTABLE ACHIEVEMENTS -->
 <section class="achievements" id="achievements">
+
     <div class="container">
 
         <div class="section-heading">
@@ -754,38 +792,53 @@ footer .footer-line {
         <div class="achievement-grid">
 
             <div class="achievement-card">
+
                 <div class="symbol">🏅</div>
+
                 <h3>STEM Graduate</h3>
+
                 <p>
                     Successfully completed my Senior High School
-                    education under the STEM strand.
+                    education under the STEM strand at Ramon
+                    Avanceña National High School.
                 </p>
+
             </div>
 
             <div class="achievement-card">
+
                 <div class="symbol">🎓</div>
+
                 <h3>College Milestone</h3>
+
                 <p>
                     Pursuing a Bachelor of Science in Information
                     Technology at the University of San Agustin.
                 </p>
+
             </div>
 
             <div class="achievement-card">
+
                 <div class="symbol">🌱</div>
+
                 <h3>Continuous Learning</h3>
+
                 <p>
                     Developing my knowledge and skills through
                     academic activities, practice, and new experiences.
                 </p>
+
             </div>
 
         </div>
+
     </div>
 </section>
 
-<!-- SECTION 4: SKILLS -->
+<!-- 4. SKILLSET & PROGRAMMING LANGUAGES -->
 <section id="skills">
+
     <div class="container">
 
         <div class="section-heading">
@@ -797,7 +850,9 @@ footer .footer-line {
         <div class="skill-columns">
 
             <div class="skill-box">
+
                 <h3>💻 Technical Skills</h3>
+
                 <div class="skill-tags">
                     <span>HTML5</span>
                     <span>CSS3</span>
@@ -807,10 +862,13 @@ footer .footer-line {
                     <span>Microsoft Office</span>
                     <span>Basic Troubleshooting</span>
                 </div>
+
             </div>
 
             <div class="skill-box">
+
                 <h3>🌟 Soft Skills</h3>
+
                 <div class="skill-tags">
                     <span>Communication</span>
                     <span>Teamwork</span>
@@ -820,14 +878,17 @@ footer .footer-line {
                     <span>Creativity</span>
                     <span>Willingness to Learn</span>
                 </div>
+
             </div>
 
         </div>
+
     </div>
 </section>
 
-<!-- SECTION 5: PROJECTS & RESEARCHES -->
+<!-- 5. PROJECTS & RESEARCHES -->
 <section class="projects" id="projects">
+
     <div class="container">
 
         <div class="section-heading">
@@ -839,10 +900,13 @@ footer .footer-line {
         <div class="project-grid">
 
             <div class="project-card">
+
                 <div class="project-image">🌐</div>
 
                 <div class="project-content">
+
                     <span class="project-label">WEB DEVELOPMENT</span>
+
                     <h3>Personal Web Portfolio</h3>
 
                     <p>
@@ -856,17 +920,22 @@ footer .footer-line {
                     <p class="project-tech">
                         Technologies: HTML5, CSS3, JavaScript
                     </p>
+
                     <p class="project-tech">
                         Reference: Current portfolio website
                     </p>
+
                 </div>
             </div>
 
             <div class="project-card">
+
                 <div class="project-image">📋</div>
 
                 <div class="project-content">
+
                     <span class="project-label">PROGRAMMING PROJECT</span>
+
                     <h3>Student Information System</h3>
 
                     <p>
@@ -881,18 +950,22 @@ footer .footer-line {
                     <p class="project-tech">
                         Proposed Technologies: HTML, CSS, JavaScript
                     </p>
+
                     <p class="project-tech">
                         Reference: Project concept
                     </p>
+
                 </div>
             </div>
 
         </div>
+
     </div>
 </section>
 
-<!-- SECTION 6: WORK ETHICS & CORE VALUES -->
+<!-- 6. WORK ETHICS & CORE VALUES -->
 <section id="values">
+
     <div class="container">
 
         <div class="section-heading">
@@ -904,94 +977,145 @@ footer .footer-line {
         <div class="values">
 
             <div class="value-item">
+
                 <span class="check">✓</span>
+
                 <div>
                     <h3>Responsibility</h3>
-                    <p>I take responsibility for my actions and complete
-                    my assigned tasks with dedication.</p>
+                    <p>
+                        I take responsibility for my actions and
+                        complete my assigned tasks with dedication.
+                    </p>
                 </div>
+
             </div>
 
             <div class="value-item">
+
                 <span class="check">✓</span>
+
                 <div>
                     <h3>Honesty and Integrity</h3>
-                    <p>I value honesty, respect, and doing what is right
-                    in every situation.</p>
+                    <p>
+                        I value honesty, respect, and doing what
+                        is right in every situation.
+                    </p>
                 </div>
+
             </div>
 
             <div class="value-item">
+
                 <span class="check">✓</span>
+
                 <div>
                     <h3>Punctuality</h3>
-                    <p>I respect other people's time and try to finish
-                    my responsibilities on schedule.</p>
+                    <p>
+                        I respect other people's time and try to
+                        finish my responsibilities on schedule.
+                    </p>
                 </div>
+
             </div>
 
             <div class="value-item">
+
                 <span class="check">✓</span>
+
                 <div>
                     <h3>Teamwork</h3>
-                    <p>I respect different ideas and cooperate with
-                    others to achieve common goals.</p>
+                    <p>
+                        I respect different ideas and cooperate
+                        with others to achieve common goals.
+                    </p>
                 </div>
+
             </div>
 
             <div class="value-item">
+
                 <span class="check">✓</span>
+
                 <div>
                     <h3>Adaptability</h3>
-                    <p>I remain open to new ideas, changes, and
-                    challenges that help me improve.</p>
+                    <p>
+                        I remain open to new ideas, changes,
+                        and challenges that help me improve.
+                    </p>
                 </div>
+
             </div>
 
             <div class="value-item">
+
                 <span class="check">✓</span>
+
                 <div>
                     <h3>Continuous Learning</h3>
-                    <p>I am committed to gaining new knowledge
-                    and improving my technical skills.</p>
+                    <p>
+                        I am committed to gaining new knowledge
+                        and improving my technical skills.
+                    </p>
                 </div>
+
             </div>
 
         </div>
+
     </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
+
     <h3>Nikka Marie Samantha Tenorio</h3>
+
     <p>Bachelor of Science in Information Technology</p>
+
     <p>University of San Agustin</p>
+
     <div class="footer-line"></div>
+
     <p>© 2026 | Personal Web Portfolio</p>
+
     <p>Learning Today, Creating Tomorrow.</p>
+
 </footer>
 
-<!-- MOBILE MENU JAVASCRIPT -->
+<!-- JAVASCRIPT FOR MOBILE NAVIGATION -->
 <script>
+
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
 menuBtn.addEventListener("click", function() {
+
     navLinks.classList.toggle("active");
 
     const isOpen = navLinks.classList.contains("active");
+
     menuBtn.setAttribute("aria-expanded", isOpen);
+
     menuBtn.textContent = isOpen ? "✕" : "☰";
+
 });
 
 document.querySelectorAll(".nav-links a").forEach(function(link) {
+
     link.addEventListener("click", function() {
+
         navLinks.classList.remove("active");
+
         menuBtn.setAttribute("aria-expanded", "false");
+
         menuBtn.textContent = "☰";
+
     });
+
 });
+
 </script>
 
 </body>
 </html>
+
